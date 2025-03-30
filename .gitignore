@@ -25,6 +25,8 @@ venv/
 env/
 ENV/
 .venv/
+share/
+man/
 
 # IDE
 .idea/
@@ -35,6 +37,21 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+
+# Documentation
+*.1
+*.2
+*.3
+*.4
+*.5
+*.6
+*.7
+*.8
+*.9
+*.roff
+*.man
+man/
+share/man/
 
 # PowerShell
 *.ps1
