@@ -6,6 +6,7 @@ from .myCar import myCar
 from .camera import Camera
 from .connection import connection
 from .robotCommands import robotCommands
-from .mpu_plot import MPUPlotter
+from .mpuPlot import mpuPlot
+# from .mpuPlot import mpuPlot
 
-__all__ = ['myCar', 'camera', 'connection', 'robotCommands', 'MPUPlotter'] 
+__all__ = ['myCar', 'camera', 'connection', 'robotCommands','mpuPlot'] 

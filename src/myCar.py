@@ -54,6 +54,7 @@ class myCar:
                 res = response_data.split(",")
                 res = [int(x)/16384 for x in res]  # convert to units of g
                 res = [round(res[i] - self.mpu_offset[i], 4) for i in range(6)]  # apply calibration offsets
+                res[2] = res[2]-1
                 return res
             
             # For non-motion commands

@@ -4,15 +4,17 @@ Este proyecto implementa una interfaz de visualización para el robot SmartCar v
 
 ## Características
 
-- Visualización de datos del MPU en tiempo real
-- Ventana redimensionable
-- Interfaz simple y eficiente
+* Visualización de datos del MPU en tiempo real
+* Transmisión de video de la cámara
+* Ventanas redimensionables
+* Interfaz simple y eficiente
 
 ## Requisitos
 
-- Python 3.x
-- matplotlib
-- numpy
+* Python 3.x
+* OpenCV
+* matplotlib
+* numpy
 
 ## Instalación
 
@@ -34,12 +36,13 @@ python main.py
 ```
 
 ## Estructura del Proyecto
-
 ```
 SmartCarRobotv4_Elegoo_Py/
 ├── src/
 │   ├── __init__.py
-│   └── mpu_plot.py
+│   ├── camera.py
+│   ├── mpuPlot.py
+│   └── myCar.py
 ├── main.py
 ├── requirements.txt
 └── README.md
