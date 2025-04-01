@@ -1,6 +1,8 @@
 # 🚗 Smart Car Robot v4 - Elegoo Python Implementation 🤖
 
-## Important Notice ⚠️
+## English 🇬🇧
+
+### Important Notice ⚠️
 This code is specifically designed for the [ELEGOO Smart Robot Car Kit V4.0](https://eu.elegoo.com/products/elegoo-smart-robot-car-kit-v-4-0). Before using this Python implementation, you must:
 
 1. 📥 Download and install the official ELEGOO firmware:
@@ -12,7 +14,7 @@ This code is specifically designed for the [ELEGOO Smart Robot Car Kit V4.0](htt
 
 Without the proper microcontroller setup, this Python implementation will not work!
 
-## Hardware Specifications 🔧
+### Hardware Specifications 🔧
 - 🧠 **Main Controller**: ATmega328P
 - 📡 **WiFi Module**: ESP32-WROOM with OV2640 camera
 - 🔌 **Communication**: UART/WiFi
@@ -20,11 +22,6 @@ Without the proper microcontroller setup, this Python implementation will not wo
 - 🔋 **Power**: 7.4V Lithium battery pack (2 hours runtime)
 - 🎯 **Sensors**: Infrared tracking, Ultrasonic distance
 - 🛠️ **Motors**: DC Motors with 1:48 gear ratio
-
-## English 🇬🇧
-
-### Project Overview 📝
-This project implements an autonomous obstacle-avoiding car using Python. The car uses various sensors to navigate and avoid obstacles while maintaining a live camera feed and motion data visualization.
 
 ### Communication Flow 🔄
 ```
@@ -45,13 +42,6 @@ The system operates through two main communication channels:
   - 🌐 Default IP: 192.168.4.1
 
 - 🔌 **Serial Port**: Secondary channel used only for debugging purposes with Arduino IDE
-
-### Hardware Components 🛠️
-- 🎥 Ultrasonic sensor & camera module
-- 📊 MPU6050 motion sensor
-- 🎛️ Main control board
-- 📡 WiFi module
-- 🔋 Battery pack
 
 ### Project Structure 📁
 ```
@@ -95,7 +85,7 @@ CameraPython/
 
 ## Español 🇪🇸
 
-## Aviso Importante ⚠️
+### Aviso Importante ⚠️
 Este código está diseñado específicamente para el [ELEGOO Smart Robot Car Kit V4.0](https://eu.elegoo.com/products/elegoo-smart-robot-car-kit-v-4-0). Antes de usar esta implementación en Python, debes:
 
 1. 📥 Descargar e instalar el firmware oficial de ELEGOO:
@@ -107,7 +97,7 @@ Este código está diseñado específicamente para el [ELEGOO Smart Robot Car Ki
 
 ¡Sin la configuración adecuada de los microcontroladores, esta implementación en Python no funcionará!
 
-## Especificaciones del Hardware 🔧
+### Especificaciones del Hardware 🔧
 - 🧠 **Controlador Principal**: ATmega328P
 - 📡 **Módulo WiFi**: ESP32-WROOM con cámara OV2640
 - 🔌 **Comunicación**: UART/WiFi
@@ -115,9 +105,6 @@ Este código está diseñado específicamente para el [ELEGOO Smart Robot Car Ki
 - 🔋 **Alimentación**: Batería de litio de 7.4V (2 horas de autonomía)
 - 🎯 **Sensores**: Seguimiento infrarrojo, Distancia ultrasónica
 - 🛠️ **Motores**: Motores DC con relación 1:48
-
-### Descripción del Proyecto 📝
-Este proyecto implementa un carro autónomo con evasión de obstáculos usando Python. El carro utiliza varios sensores para navegar y evitar obstáculos mientras mantiene una transmisión en vivo de la cámara y visualización de datos de movimiento.
 
 ### Flujo de Comunicación 🔄
 ```
@@ -139,51 +126,6 @@ El sistema opera a través de dos canales principales de comunicación:
 
 - 🔌 **Puerto Serial**: Canal secundario usado solo para propósitos de depuración con Arduino IDE
 
-### Componentes de Hardware 🛠️
-- 🎥 Sensor ultrasónico y módulo de cámara
-- 📊 Sensor de movimiento MPU6050
-- 🎛️ Placa de control principal
-- 📡 Módulo WiFi
-- 🔋 Paquete de batería
-
-### Project Structure 📁
-```
-CameraPython/
-├── main.py              # 🎯 Main entry point
-├── src/
-│   ├── myCar.py        # 🚙 Core car control class
-│   ├── obstacleAvoidance.py  # 🛡️ Obstacle avoidance logic
-│   ├── camera.py       # 📸 Camera feed handling
-│   ├── mpuPlot.py      # 📊 Motion data visualization
-│   ├── connection.py   # 🔌 Network communication
-│   └── robotCommands.py # ⚙️ Command definitions
-```
-
-### Dependencies 📦
-- Python 3.x 🐍
-- OpenCV (cv2) 👁️
-- NumPy 🔢
-- Matplotlib 📈
-- Socket (built-in) 🔌
-
-### Key Features ✨
-- 📸 Real-time camera feed
-- 📊 Motion data visualization (MPU6050)
-- 🛡️ Autonomous obstacle avoidance
-- 🌐 Network-based control
-- 🔄 Resizable camera window
-
-### How to Run 🚀
-1. 🔌 Connect to the car's WiFi network
-2. 📦 Install dependencies: `pip install -r requirements.txt`
-3. ▶️ Run the program: `python main.py`
-
-### Controls 🎮
-- 🤖 The car operates autonomously
-- 🔄 Camera window can be resized
-- 📊 Motion data is displayed in real-time
-- ⏹️ Press Ctrl+C to stop the program
-
 ### Estructura del Proyecto 📁
 ```
 CameraPython/
@@ -196,6 +138,13 @@ CameraPython/
 │   ├── connection.py   # 🔌 Comunicación por red
 │   └── robotCommands.py # ⚙️ Definiciones de comandos
 ```
+
+### Dependencias 📦
+- Python 3.x 🐍
+- OpenCV (cv2) 👁️
+- NumPy 🔢
+- Matplotlib 📈
+- Socket (incluido) 🔌
 
 ### Características Principales ✨
 - 📸 Transmisión en vivo de la cámara
