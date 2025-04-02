@@ -163,3 +163,76 @@ CameraPython/
 - 🔄 La ventana de la cámara se puede redimensionar
 - 📊 Los datos de movimiento se muestran en tiempo real
 - ⏹️ Presionar Ctrl+C para detener el programa 
+
+## Features
+
+- Remote control via WiFi
+- Obstacle avoidance
+- Camera streaming
+- Motion detection
+- Ground tracking
+
+## Installation
+
+1. Create a virtual environment:
+```bash
+python -m venv .venv
+```
+
+2. Activate the virtual environment:
+- Windows:
+```bash
+.venv\Scripts\activate
+```
+- Linux/Mac:
+```bash
+source .venv/bin/activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Install the package in development mode:
+```bash
+pip install -e .
+```
+
+## Usage
+
+Run the obstacle avoidance demo:
+```bash
+python apps/obstacle_avoidance/main.py
+```
+
+## Project Structure
+
+```
+CameraPython/
+├── apps/                    # Aplicaciones ejecutables
+│   └── obstacle_avoidance/  # Módulo específico de la aplicación
+├── src/                     # Código fuente principal
+│   ├── __init__.py         # Inicialización del paquete
+│   ├── myCar.py            # Clase principal del carro
+│   ├── camera.py           # Manejo de la cámara
+│   ├── connection.py       # Manejo de conexiones
+│   ├── mpuPlot.py          # Visualización MPU
+│   ├── obstacleAvoidance.py # Lógica de evitación
+│   └── robotCommands.py    # Comandos del robot
+├── pyproject.toml          # Configuración del proyecto
+├── requirements.txt        # Dependencias
+└── README.md              # Documentación
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributors
+
+- [Adc-alt](https://github.com/Adc-alt) - Project maintainer 
