@@ -9,11 +9,16 @@ class robotCommands:
         return {"H": str(self.cmd_no)}
 
     def move(self, direction, speed):
+        # Accept both numeric codes and text
         direction_map = {
             'forward': '3',
             'backward': '4',
             'left': '1',
-            'right': '2'
+            'right': '2',
+            '1': '1',  # Direct numeric codes
+            '2': '2',
+            '3': '3',
+            '4': '4'
         }
 
         msg = self._create_base_message()
@@ -52,13 +57,13 @@ class robotCommands:
     def measure_distance(self):
         msg = self._create_base_message()
         msg['N'] = str(21)
-        msg['D1'] = str(2)  # Medir distancia directamente
+        msg['D1'] = str(2)  # Measure distance directly
         return json.dumps(msg)
 
     def check_obstacle(self):
         msg = self._create_base_message()
         msg['N'] = str(21)
-        msg['D1'] = str(1)  # Solo detectar obstáculo
+        msg['D1'] = str(1)  # Only detect obstacle
         return json.dumps(msg)
 
     def measure_motion(self):

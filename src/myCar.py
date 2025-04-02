@@ -1,15 +1,13 @@
 import re
-import json  # Add json import
+import json
 from .connection import connection
-from .camera import Camera
 from .robotCommands import robotCommands
-import time
 
 
 class myCar:
     def __init__(self, ip="192.168.4.1", port=100):
         self.connection = connection(ip, port)
-        self.camera = Camera(ip)
+        # self.camera = Camera(ip)  # Camera commented out
         self.commands = robotCommands()
         # MPU calibration offsets
         self.mpu_offset = [0.007, 0.022, -0.085, 0.012, -0.011, -0.05]  # Adjusted az offset
@@ -95,9 +93,17 @@ class myCar:
         return self.communicate(command)
 
     def measure_distance(self):
-        """Measure distance using ultrasonic sensor"""
+        """
+        Measure the distance to the nearest obstacle.
+
+        Returns:
+            float: Distance in centimeters, or None if measurement fails.
+        """
         command = self.commands.measure_distance()
-        return self.communicate(command)
+        result = self.communicate(command)
+        if isinstance(result, (int, float)):
+            return int(result)
+        return 0
 
     def check_obstacle(self):
         """Check for obstacles"""
@@ -113,14 +119,6 @@ class myCar:
         """Check if car is on ground"""
         command = self.commands.check_ground()
         return self.communicate(command)
-
-    def get_camera_image(self):
-        """Get an image from the car's camera"""
-        return self.camera.capture()
-
-    def display_camera_image(self, img):
-        """Display an image from the car's camera"""
-        self.camera.show_image(img)
 
     def disconnect(self):
         """Close the connection with the car"""
